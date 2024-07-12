@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Slot Picker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="container">
+            <h1>Select Date and Time Slot</h1>
+            <label for="datePicker">Pick a date:</label>
+            <input type="date" id="datePicker" min="" max="">
+            
+            <div id="timeSlots" class="hidden">
+                <p>Select a time slot:</p>
+                <button onclick="selectTimeSlot('4PM - 5PM')">4PM - 5PM</button>
+                <button onclick="selectTimeSlot('5PM - 6PM')">5PM - 6PM</button>
+            </div>
+            
+            <div id="selectedSlot" class="hidden">
+                <p>You selected:</p>
+                <p id="slotText"></p>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
