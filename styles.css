@@ -1,39 +1,98 @@
+/* Base styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #f9f9f9;
     margin: 0;
-    background-image: url(stadium-lights-flashes-football-field_99433-1401-transformed.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
+/* Container styling */
 .container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
     text-align: center;
 }
 
-.hidden {
-    display: none;
+/* Heading styling */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
 
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Input styling */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Fieldset styling */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 10px 10px;
+}
+
+/* Radio group styling */
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+/* Radio button styling */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
     background-color: #007BFF;
     color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+/* Button hover styling */
 button:hover {
     background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
 }

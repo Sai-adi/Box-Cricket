@@ -1,25 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const datePicker = document.getElementById('datePicker');
-    const timeSlots = document.getElementById('timeSlots');
-    const selectedSlot = document.getElementById('selectedSlot');
-    const slotText = document.getElementById('slotText');
+document.addEventListener("DOMContentLoaded", function () {
+    const dateInput = document.getElementById("date");
 
+    // Set the date limits
     const today = new Date();
-    const minDate = today.toISOString().split('T')[0];
-    const maxDate = new Date(today.setDate(today.getDate() + 7)).toISOString().split('T')[0];
-    
-    datePicker.setAttribute('min', minDate);
-    datePicker.setAttribute('max', maxDate);
+    const maxDate = new Date();
+    maxDate.setDate(today.getDate() + 7);
 
-    datePicker.addEventListener('change', function() {
-        timeSlots.classList.remove('hidden');
-        selectedSlot.classList.add('hidden');
+    const formattedToday = today.toISOString().split('T')[0];
+    const formattedMaxDate = maxDate.toISOString().split('T')[0];
+
+    dateInput.setAttribute("min", formattedToday);
+    dateInput.setAttribute("max", formattedMaxDate);
+
+    document.getElementById("date-time-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const selectedDate = dateInput.value;
+        const selectedTimeSlot = document.querySelector('input[name="time-slot"]:checked').value;
+        alert(`You have selected: ${selectedDate} - ${selectedTimeSlot}`);
     });
 });
-
-function selectTimeSlot(slot) {
-    const slotText = document.getElementById('slotText');
-    const selectedSlot = document.getElementById('selectedSlot');
-    slotText.textContent = slot;
-    selectedSlot.classList.remove('hidden');
-}
