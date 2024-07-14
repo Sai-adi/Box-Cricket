@@ -37,33 +37,25 @@ h1 {
     text-align: left;
 }
 
-/* Input styling */
-input[type="date"] {
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input and select styling */
+input[type="text"],
+input[type="tel"],
+select {
     width: 100%;
     padding: 10px;
-    margin-top: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     box-sizing: border-box;
-}
-
-/* Fieldset styling */
-fieldset {
-    border: none;
-    padding: 0;
-}
-
-/* Radio group styling */
-.radio-group {
-    display: flex;
-    align-items: center;
     margin-bottom: 10px;
-}
-
-/* Radio button styling */
-input[type="radio"] {
-    margin-right: 10px;
 }
 
 /* Button styling */

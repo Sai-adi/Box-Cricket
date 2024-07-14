@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         const selectedDate = dateInput.value;
         const selectedTimeSlot = document.querySelector('input[name="time-slot"]:checked').value;
-        alert(`You have selected: ${selectedDate} - ${selectedTimeSlot}`);
+        const queryParams = `date=${selectedDate}&timeSlot=${encodeURIComponent(selectedTimeSlot)}`;
+        window.location.href = `../Details Page/index.html?${queryParams}`;
     });
 });

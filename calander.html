@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <div class="container">
-            <h1>Select Date and Time Slot</h1>
-            <label for="datePicker">Pick a date:</label>
-            <input type="date" id="datePicker" min="" max="">
-            
-            <div id="timeSlots" class="hidden">
-                <p>Select a time slot:</p>
-                <option  onclick="selectTimeSlot('4PM - 5PM')">4PM - 5PM</option >
-                <option  onclick="selectTimeSlot('5PM - 6PM')">5PM - 6PM</option >
+    <div class="container">
+        <h1>Select a Date and Time Slot</h1>
+        <form id="date-time-form">
+            <div class="form-group">
+                <label for="date">Choose a date:</label>
+                <input type="date" id="date" name="date" required>
             </div>
-            
-            <div id="selectedSlot" class="hidden">
-                <p>You selected:</p>
-                <p id="slotText"></p>
-            </div>
-        </div>
+            <fieldset class="form-group">
+                <legend>Select a time slot:</legend>
+                <div class="radio-group">
+                    <input type="radio" id="slot1" name="time-slot" value="4PM to 5PM" required>
+                    <label for="slot1">4PM to 5PM</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="slot2" name="time-slot" value="5PM to 6PM">
+                    <label for="slot2">5PM to 6PM</label>
+                </div>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
