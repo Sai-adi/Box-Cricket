@@ -100,20 +100,38 @@ button:hover {
 }
 
 .confirmation {
-    text-align: left;
+    text-align: center;
     padding: 20px;
-    background-color: #f0f8ff;
-    border: 1px solid #cce7ff;
-    border-radius: 5px;
+    background-color: #232121;
 }
 
 .confirmation h1 {
-    color: #007BFF;
+    animation: colorChange 10s infinite;
+    transition: color 2s ease-in-out;
     text-align: center;
+    
 }
 
 .confirmation p {
     margin: 10px 0;
     font-size: 16px;
-    color: #333;
+    color: #ffffff;
+    margin-bottom: 15px;
 }
+@keyframes colorChange {
+            0% {
+                color: #8b0000;
+            }
+            25% {
+                color: #b22222;
+            }
+            50% {
+                color: #cd5c5c;
+            }
+            75% {
+                color: #f08080;
+            }
+            100%{
+                color: #8b0000;
+            } 
+        }
